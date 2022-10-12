@@ -26,8 +26,16 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     if (metadata.terminated) {
       if (metadata.over) {
+        gtag('event', 'Game_Played', {
+          'event_category' : 'Loss',
+          'value' : 1
+        });
         self.message(false); // You lose
       } else if (metadata.won) {
+        gtag('event', 'Game_Played', {
+          'event_category' : 'Win',
+          'value' : 1
+        });
         self.message(true); // You win!
       }
     }

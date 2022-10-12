@@ -5,7 +5,7 @@ function HTMLActuator() {
   this.messageContainer = document.querySelector(".game-message");
 
   this.score = 0;
-  sync src="https://www.googletagmanager.com/gtag/js?id=G-4EDLVBXN3C";
+  src="https://www.googletagmanager.com/gtag/js?id=G-4EDLVBXN3C";
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

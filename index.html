@@ -33,7 +33,7 @@
     </div>
     <p class="game-intro">Combine other Yeshiva League High Schools to reach the <span onclick="document.body.style.background='url(img/petey.png)';">almighty <strong>Frisch!</strong></span></p>
 
-    <div class="game-container">
+    <div class="game-container" id="game">
       <div class="game-message">
         <p></p>
         <div class="lower">
@@ -96,6 +96,19 @@
 	    resultPara.textContent = `Error: ${err}`;
 	  }
 	});
+    </script>
+    <script>
+	document.getElementById("game").addEventListener("click", function() {
+	html2canvas(document.getElementById("html-content-holder")).then(function (canvas) {			
+		var anchorTag = document.createElement("a");
+		document.body.appendChild(anchorTag);
+		document.getElementById("previewImg").appendChild(canvas);
+		anchorTag.download = "filename.png";
+		anchorTag.href = canvas.toDataURL();
+		anchorTag.target = '_blank';
+		anchorTag.click();
+		});
+ 	});
     </script>
 
     <p class="game-explanation">

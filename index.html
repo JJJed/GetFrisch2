@@ -97,9 +97,10 @@
 	  }
 	});
     </script>
+	 <p><button id="g">Download</button></p>
     <script>
-	document.getElementById("game").addEventListener("click", function() {
-	html2canvas(document.getElementById("html-content-holder")).then(function (canvas) {			
+	document.getElementById("gb").addEventListener("click", function() {
+	html2canvas(document.getElementById("game")).then(function (canvas) {			
 		var anchorTag = document.createElement("a");
 		document.body.appendChild(anchorTag);
 		document.getElementById("previewImg").appendChild(canvas);

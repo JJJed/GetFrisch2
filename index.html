@@ -75,6 +75,20 @@
 
       </div>
     </div>
+   <button onclick="shareGame()">Share Game</button>
+   <script>
+      function shareGame() {
+         // Get the div element with id "game"
+         var game = document.getElementById("game");
+
+         // Use the browser's native "share" function to share the snapshot of the "game" div
+         navigator.share({
+            title: "Snapshot of the Game",
+            text: "Check out this snapshot of the game:",
+            url: game.toDataURL()
+         });
+      }
+   </script>
     <!--
     <p><button>Share MDN!</button></p>
     <p class="result"></p>

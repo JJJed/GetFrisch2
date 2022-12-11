@@ -91,7 +91,21 @@
 
       // Get the 2D context of the canvas and draw the pixel contents of the div onto it
       var ctx = canvas.getContext("2d");
-      ctx.drawImage(myDiv, 0, 0);
+      ctx.fillStyle = rgba(238, 228, 218, 0.5);
+      ctx.drawRect(0, 0, canvas.width, canvas.height);
+      for(var x = 0; x < 4; x++) {
+    	for (var y = 0; y < 4; y++) {
+		if gameManager.grid.cells[x][y] == null
+		{	
+      		    ctx.drawImage("/image/empty.png", dx=x*106.25, dy=y*106.25, dWidth=(x+1)*106.25, dHeight=(y+1)*106.25);
+		}
+		else
+		{
+		    console.log(gameManager.grid.cells[x][y].value);
+		    ctx.drawImage("/image/empty.png", dx=x*106.25, dy=y*106.25, dWidth=(x+1)*106.25, dHeight=(y+1)*106.25);
+		}
+	}
+      }
    </script>
    <button onclick="shareGame()">Share Game</button>
    <script>

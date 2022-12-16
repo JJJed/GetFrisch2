@@ -328,9 +328,9 @@ hr {
 
   $base: 2;
   $exponent: 1;
-  $limit: 12;
+  $limit: 13;
 
-  // Colors for all 12 states, false = no special color
+  // Colors for all 13 states, false = no special color
   $special-colors: false false, // 2
                    false false, // 4
                    #f78e48 true, // 8
